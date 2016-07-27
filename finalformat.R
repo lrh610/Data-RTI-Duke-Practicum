@@ -3,13 +3,13 @@
 #----------------------#
 
 # set the unique working directory for the app
-setwd("~/Desktop/Shiny App")
 
 
 # add all the libraries
 library(shiny)
 library(leaflet)
 library(RColorBrewer)
+
 
 # funcion to center align objects in the absolute panel
 alignCenter <- function(el) {
@@ -41,7 +41,7 @@ server = function(input, output) {
 	
    
 # read in people data and make matrix of their household latitudes and longitude
-data = read.csv("~/Desktop/Shiny App/Shiny Test Data.csv")
+data = read.csv("Shiny Test Data")
 newdata = data[sample(nrow(data),.25*(nrow(data))),]
 latlongdf = as.data.frame(newdata[,13:14])
 
