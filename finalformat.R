@@ -41,7 +41,7 @@ server = function(input, output) {
 	
    
 # read in people data and make matrix of their household latitudes and longitude
-data = read.csv("Shiny Test Data")
+data <- read.csv(unz("Shiny Test Data.csv.zip", "Shiny Test Data.csv"))
 newdata = data[sample(nrow(data),.25*(nrow(data))),]
 latlongdf = as.data.frame(newdata[,13:14])
 
